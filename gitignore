@@ -1,0 +1,30 @@
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS system files (just in case)
+.DS_Store
+
+# VMware
+*.vmem
+*.vmsn
+*.vmss
+*.nvram
+*.lck
+*.vmxf
+*.vmx~
+
+# Log files
+*.log
+
+# GitHub Desktop backup
+*.orig
+
+# VSCode (if used)
+.vscode/
+
+# Node modules or build artifacts (future proofing)
+node_modules/
+dist/
