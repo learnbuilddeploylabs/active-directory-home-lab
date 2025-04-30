@@ -28,7 +28,7 @@ A step-by-step guide to building your own Active Directory lab from scratch usin
 ## <h2 id="vmware-workstation-pro-installation"> ⚙️ VMware Workstation Pro Installation </h2>
 
 1. Download [VMware Workstation Pro](https://www.vmware.com/products/workstation-pro.html) from the official VMware site.
-2. Run the installer as Administrator.
+2. Right click and run the installer as administrator.
 3. Leave the default installation settings unless you have specific reason to change them.
 4. Complete the installation and reboot if prompted.
 5. Run VMware Workstation Pro normally, NOT as admin. Don't be so power-hungry.
@@ -43,32 +43,32 @@ A step-by-step guide to building your own Active Directory lab from scratch usin
 - Open **VMware Workstation Pro**.
 - Select **Create a New Virtual Machine**.
   
-![Create a New Virtual Machine](images/vmware-installation/dc01-setup/dc01_01_create-vm.PNG)
+![Create a New Virtual Machine](images/vm-installation/dc01-setup/dc01_01_create-vm.PNG)
   
 - Choose **Typical (recommended)** and click `Next`.
   
-![Typical Installation](images/vmware-installation/dc01-setup/dc01_02_typical-setup.PNG)
+![Typical Installation](images/vm-installation/dc01-setup/dc01_02_typical-setup.PNG)
   
 - Select **I will install the operating system later**, then click `Next`.
   
-![Install Later](images/vmware-installation/dc01-setup/dc01_03_install-os-later.PNG)
+![Install Later](images/vm-installation/dc01-setup/dc01_03_install-os-later.PNG)
   
 - **OS: Microsoft Windows** → **Version: Windows Server 2019**.
 - Click `Next`.
 
-![Select OS](images/vmware-installation/dc01-setup/dc01_04_select-os.PNG)
+![Select OS](images/vm-installation/dc01-setup/dc01_04_select-os.PNG)
   
 - Name the virtual machine **DC01**, choose a save location, then click `Next`.
 
-![Name and Location](images/vmware-installation/dc01-setup/dc01_05_name-and-location.PNG)
+![Name and Location](images/vm-installation/dc01-setup/dc01_05_name-and-location.PNG)
    
-- Allocate **60 GB** of storage. (Dynamic allocation is fine)  
+- Allocate **60 GB** of storage (Dynamic allocation is fine), then click `Next`.
 
-![Disk Capacity](images/vmware-installation/dc01-setup/dc01_06_disk-capacity.PNG)
+![Disk Capacity](images/vm-installation/dc01-setup/dc01_06_disk-capacity.PNG)
 
 - Click `Customize Hardware`.  
 
-![Customize Hardware](images/vmware-installation/dc01-setup/dc01_07_customize-hardware.PNG)
+![Customize Hardware](images/vm-installation/dc01-setup/dc01_07_customize-hardware.PNG)
 
 [🔝 Back to Top](#top)
 
@@ -78,25 +78,25 @@ A step-by-step guide to building your own Active Directory lab from scratch usin
 - **Memory**: 4096 MB (4GB) recommended, but the default may work fine depending on your system.
 - **Processors**: 2
 
-<img src="images/vmware-installation/dc01-setup/dc01_08_ram-and-processor.PNG" alt="RAM and CPU" width="448" height="450">
+<img src="images/vm-installation/dc01-setup/dc01_08_ram-and-processor.PNG" alt="RAM and CPU" width="448" height="450">
 
 - **CD/DVD (SATA)**: Choose `Use ISO image file` and load your Server 2019 ISO.
 
-<img src="images/vmware-installation/dc01-setup/dc01_09_select-iso.PNG" alt="Select ISO" width="448" height="450">
+<img src="images/vm-installation/dc01-setup/dc01_09_select-iso.PNG" alt="Select ISO" width="448" height="450">
 
 - **Network Adapters**:
   - Leave the default NAT adapter.
   - Click 'Add'.
  
-<img src="images/vmware-installation/dc01-setup/dc01_11_add-network.PNG" alt="Add Adapter" width="448" height="450">
+<img src="images/vm-installation/dc01-setup/dc01_11_add-network.PNG" alt="Add Adapter" width="448" height="450">
 
-  - Select **Network Adapter**.
+  - Select **Network Adapter**, then click 'Finish'.
 
-![Select Adapter](images/vmware-installation/dc01-setup/dc01_12_select-network-adapter.PNG)
+![Select Adapter](images/vm-installation/dc01-setup/dc01_12_select-network-adapter.PNG)
 
   - Select **Host-only: A private network shared with the host**.
 
-<img src="images/vmware-installation/dc01-setup/dc01_13_host-only_adapter.PNG" alt="Host Only Adapter" width="448" height="450">
+<img src="images/vm-installation/dc01-setup/dc01_13_host-only_adapter.PNG" alt="Host Only Adapter" width="448" height="450">
 
 - Click `Close`, then `Finish`.
 
@@ -116,7 +116,7 @@ A step-by-step guide to building your own Active Directory lab from scratch usin
 
 ![Press Any Key](images/os-installation/dc01-os/dc01_01_press-any-key.PNG)
 
-- Choose **Standard (Desktop Experience)**.
+- Choose **Standard (Desktop Experience)**, then click 'Next'
 
 ![Standard (Desktop Experience)](images/os-installation/dc01-os/dc01_02_standard-desktop-exp.PNG)
 
@@ -129,18 +129,26 @@ A step-by-step guide to building your own Active Directory lab from scratch usin
 
 ![Select Drive](images/os-installation/dc01-os/dc01_05_select-drive.PNG)
 
-- Set a strong local administrator password.
+- Set a strong local administrator password, then click 'Finish'.
 
 ![Create Local Admin](images/os-installation/dc01-os/dc01_06_create-local-admin.PNG)
 
 - Once installed, log in.
   - Click `Send Ctrl+Alt+Del to this virtual machine`.
   - Log in. 
-- Optional: Enable RDP in **Server Manager** → **Local Server** → enable **Remote Desktop**.
-- Install VMware Tools via VM menu.
+- Install VMware Tools.
   - This improves performance, mouse behavior, and screen resolution.
-
+  
 ![Install VMware Tools](images/os-installation/dc01-os/dc01_10_install-vmware-tools.PNG)
+
+  - Click `Next`.
+  - Select **Typical**, click `Next`.
+
+  ![VMware Tools Typical Install](images/os-installation/dc01-os/dc01_11_vmware-tools-typical.PNG)
+
+  - Click `Install`, then `Finish`.
+  - Click `Yes` to restart.
+    - There's a mandatory restart coming up in a few steps after you rename this computer, so you can hold off on restarting if you want to. Or can you...?
 
 **OS: Installed. 🎉 Good job!**
 
@@ -168,6 +176,7 @@ A step-by-step guide to building your own Active Directory lab from scratch usin
   - Subnet: `255.255.255.0`
   - Gateway: (leave blank)
   - DNS: `127.0.0.1`
+- Click `OK`.
  
 ![IP Settings](images/network-setup/dc01-network/dc01_06_ipv4-settings.PNG)
 
@@ -177,7 +186,7 @@ A step-by-step guide to building your own Active Directory lab from scratch usin
 
 ### 2. Rename DC01
 - In **Server Manager**, click on **Local Server**.
-- Click on the Computer name. 
+- Click on the computer name in blue. 
 - No, not that one. 
 - What did I just say? Not the words 'Computer name', the name in blue next to that. Oh, just check the screenshot...
 
@@ -187,11 +196,10 @@ A step-by-step guide to building your own Active Directory lab from scratch usin
 
 ![Click Change](images/network-setup/dc01-network/dc01_05_click-change.PNG)
 
-- Set Computer name to `DC01`.
+- Set Computer name to `DC01`, then click `OK`.
 
 ![Rename Computer](images/network-setup/dc01-network/dc01_07_rename-computer.PNG)
 
-- Click `OK`.
 - Click `OK` again.
 - Click `Close`.
 - Click `Restart Now`
@@ -243,7 +251,7 @@ A step-by-step guide to building your own Active Directory lab from scratch usin
 ![Didn't Listen](images/ad-setup/dc01-ad/dc01_07_promote-server-did-not-listen.PNG)
 
 - Select **Add a new forest**.
-- Set the Root domain name to **corp.local**.
+- Set the Root domain name to `corp.local`.
 
 ![Domain Name](images/ad-setup/dc01-ad/dc01_08_add-forest.PNG)
 
@@ -278,32 +286,32 @@ A step-by-step guide to building your own Active Directory lab from scratch usin
 - Open **VMware Workstation Pro**.
 - Select **Create a New Virtual Machine**.
   
-![Create a New Virtual Machine](images/vmware-installation/client01-setup/client01_01_create-vm.PNG)
+![Create a New Virtual Machine](images/vm-installation/client01-setup/client01_01_create-vm.PNG)
   
 - Choose **Typical (recommended)** and click `Next`.
   
-![Typical Installation](images/vmware-installation/client01-setup/client01_02_typical-setup.PNG)
+![Typical Installation](images/vm-installation/client01-setup/client01_02_typical-setup.PNG)
   
 - Select **I will install the operating system later**, then click `Next`.
   
-![Install Later](images/vmware-installation/client01-setup/client01_03_install-os-later.PNG)
+![Install Later](images/vm-installation/client01-setup/client01_03_install-os-later.PNG)
   
 - **OS: Microsoft Windows** → **Version: Windows 10**.
 - Click `Next`.
 
-![Select OS](images/vmware-installation/client01-setup/client01_04_select-os.PNG)
+![Select OS](images/vm-installation/client01-setup/client01_04_select-os.PNG)
   
 - Name the virtual machine **CLIENT01**, choose a save location, then click `Next`.
 
-![Name and Location](images/vmware-installation/client01-setup/client01_05_name-and-location.PNG)
+![Name and Location](images/vm-installation/client01-setup/client01_05_name-and-location.PNG)
 
-- Allocate **40 GB** of storage. (Dynamic allocation is fine)
+- Allocate **40 GB** of storage (Dynamic allocation is fine), then click `Next`.
 
-![Disk Capacity](images/vmware-installation/client01-setup/client01_06_disk-capacity.PNG)
+![Disk Capacity](images/vm-installation/client01-setup/client01_06_disk-capacity.PNG)
 
 - Click `Customize Hardware`.
 
-![Customize Hardware](images/vmware-installation/client01-setup/client01_07_customize-hardware.PNG)
+![Customize Hardware](images/vm-installation/client01-setup/client01_07_customize-hardware.PNG)
 
 
 [🔝 Back to Top](#top)
@@ -314,27 +322,27 @@ A step-by-step guide to building your own Active Directory lab from scratch usin
 - **Memory**: 4096 MB (4GB) recommended, but the default may work fine depending on your system.
 - **Processors**: 2
 
-<img src="images/vmware-installation/client01-setup/client01_08_ram-and-processor.PNG" alt="RAM and CPU" width="448" height="450">
+<img src="images/vm-installation/client01-setup/client01_08_ram-and-processor.PNG" alt="RAM and CPU" width="448" height="450">
 
 - **CD/DVD (SATA)**: Choose `Use ISO image file` and load your Windows 10 ISO.
 
-<img src="images/vmware-installation/client01-setup/client01_09_select-iso.PNG" alt="Select ISO" width="448" height="450">
+<img src="images/vm-installation/client01-setup/client01_09_select-iso.PNG" alt="Select ISO" width="448" height="450">
 
 - **Network Adapters**:
   - Leave the default NAT adapter.
   - Click 'Add'.
  
-<img src="images/vmware-installation/client01-setup/client01_10_add-network.PNG" alt="Add Adapter" width="448" height="450">
+<img src="images/vm-installation/client01-setup/client01_10_add-network.PNG" alt="Add Adapter" width="448" height="450">
 
-  - Select **Network Adapter**.
+  - Select **Network Adapter**, then click `Finish`.
 
-![Select Adapter](images/vmware-installation/client01-setup/client01_11_select-network-adapter.PNG)
+![Select Adapter](images/vm-installation/client01-setup/client01_11_select-network-adapter.PNG)
 
-  - Select **Host-only: A private network shared with the host**.
+  - Select **Host-only: A private network shared with the host**, then click `Close`
 
-<img src="images/vmware-installation/client01-setup/client01_12_host-only_adapter.PNG" alt="Host Only Adapter" width="448" height="450">
+<img src="images/vm-installation/client01-setup/client01_12_host-only_adapter.PNG" alt="Host Only Adapter" width="448" height="450">
 
-- Click `Close`, then `Finish`.
+- Click `Finish`.
 
 **That's TWO virtual machines ready to go. Nicely done! 🎉**
 
@@ -380,8 +388,7 @@ A step-by-step guide to building your own Active Directory lab from scratch usin
 
   - Click `Install`, then `Finish`.
   - Click `Yes` to restart.
-    - There's a mandatory restart coming up in a few steps after you rename this computer, so you can hold off on restarting if you want to. Or can you...? 
-    - You can (This sounds familiar, doesn't it?).
+    - There's a mandatory restart coming up in a few steps after you rename this computer, so you can hold off on restarting if you want to. Or can you...? (This sounds familiar, doesn't it?).
 
 **You could do this in your sleep! Keep up the great work! 🎉**
 
@@ -405,8 +412,7 @@ A step-by-step guide to building your own Active Directory lab from scratch usin
 
 ![IPv4 Properties](images/network-setup/client01-network/client01_03_ethernet-properties.PNG)
 
-- Set DNS to the **DC01** IP address, `192.168.100.10`.
-- Click `OK`.
+- Set DNS to the **DC01** IP address, `192.168.100.10`, the click `OK`.
 
 ![Set DNS](images/network-setup/client01-network/client01_04_set-dns.PNG)
 
@@ -428,8 +434,7 @@ A step-by-step guide to building your own Active Directory lab from scratch usin
 
 ![System Properties](images/ad-setup/client01-ad/client01_02_system-properties.PNG)
 
-- Rename to **CLIENT01**.
-- Click `OK`.
+- Rename to **CLIENT01**, then click `OK`.
 
 ![Rename Computer](images/ad-setup/client01-ad/client01_03_change-name.PNG)
 
@@ -457,8 +462,7 @@ A step-by-step guide to building your own Active Directory lab from scratch usin
 
 ![System Properties](images/ad-setup/client01-ad/client01_02_system-properties.PNG)
 
-- Select **Domain**, set to **corp.local**.
-- Click `OK`.
+- Select **Domain**, set to `corp.local`, then click `OK`.
 
 ![Set Domain](images/ad-setup/client01-ad/client01_05_set-domain.PNG)
 
