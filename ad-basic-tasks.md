@@ -26,30 +26,30 @@ OUs (Organizational Units) help organize users, groups, and computers into logic
 
 1. Open **Server Manager** → **Tools** → **Active Directory Users and Computers**.
 
-![Users and Computers](images/ad-tasks/ou/01-create-ou.PNG)
+![Users and Computers](images/ad-tasks/ou/01-create-ou.png)
 
 2. In the left panel, expand your domain (`corp.local`).
 3. Right-click `corp.local` → **New** → **Organizational Unit**.
 
-![New OU](images/ad-tasks/ou/02-new-ou.PNG)
+![New OU](images/ad-tasks/ou/02-new-ou.png)
 
 4. Name it: `Departments`, and click OK.
    - 🔒 **Best practice**: Leave **"Protect container from accidental deletion"** checked. For *lab* purposes, however, you're the boss.
 
-![Departments OU](images/ad-tasks/ou/03-departments.PNG)
+![Departments OU](images/ad-tasks/ou/03-departments.png)
 
 5. Right-click `Departments` → **New** → **Organizational Unit** again.
    - 💡 **Tip**: You can also left click `Departments` and right-click in the detail window to bring up the menu. I'll show you in the screenshot.
 
-![New OU, again](images/ad-tasks/ou/04-department-ou.PNG)
+![New OU, again](images/ad-tasks/ou/04-department-ou.png)
 
 6. Use this process to create two sub-OUs:
    - `HR` (everyone's favorite...)
    - `ITSupport` (should be everyone's favorite)
 
 <p float="left">
-  <img src="images/ad-tasks/ou/05-department-hr.PNG" alt="HR Sub-OU" width="400" />
-  <img src="images/ad-tasks/ou/06-department-itsupport.PNG" alt="ITSupport Sub-OU" width="400" />   
+  <img src="images/ad-tasks/ou/05-department-hr.png" alt="HR Sub-OU" width="400" />
+  <img src="images/ad-tasks/ou/06-department-itsupport.png" alt="ITSupport Sub-OU" width="400" />   
 </p>
 
 🎉 You now have a clean structure for organizing your user accounts and departments.
@@ -65,7 +65,7 @@ Let’s create one user for each department.
 1. In **Active Directory Users and Computers**, right-click `HR` → **New** → **User**.
    - 💡 **Tip**: Remember, you can also left click `HR` and right-click in the detail window to bring up the menu. I'll stop pestering you with reminders going forward. 
 
-![New HR User](images/ad-tasks/user/01-new-hr-user.PNG)
+![New HR User](images/ad-tasks/user/01-new-hr-user.png)
 
 2. Use these details:
    - **First name**: `John`
@@ -73,18 +73,18 @@ Let’s create one user for each department.
    - **User logon name**: `jsmith`
 3. Click `Next`.
 
-![John Smith](images/ad-tasks/user/02-jsmith.PNG)
+![John Smith](images/ad-tasks/user/02-jsmith.png)
 
 4. Set a password.
    - Don't forget this one. Maybe write it down this time...
    - 🔒 **Best practice**: Leave “User must change password at next logon” checked. This is a security habit used in real-world environments. For *lab* purposes, however, you're the boss. 
 5. Click `Next`, then click `Finish`.
 
-![Set Password](images/ad-tasks/user/03-jsmith-pass.PNG)
+![Set Password](images/ad-tasks/user/03-jsmith-pass.png)
 
 6. Repeat for the `ITSupport` OU:
 
-![New HR User](images/ad-tasks/user/05-new-itsupport-user.PNG)
+![New HR User](images/ad-tasks/user/05-new-itsupport-user.png)
 
 7. Use these details:
    - **First name**: `Jane`
@@ -92,9 +92,9 @@ Let’s create one user for each department.
    - **User logon name**: `jdoe`
 8. Click `Next`.
 
-![Jane Doe](images/ad-tasks/user/06-jdoe.PNG)
+![Jane Doe](images/ad-tasks/user/06-jdoe.png)
 
-![Set Password](images/ad-tasks/user/07-jdoe-pass.PNG)
+![Set Password](images/ad-tasks/user/07-jdoe-pass.png)
 
 🎉 Way to go Neo. You've just mastered creating new users in Active Directory!
 
@@ -108,7 +108,7 @@ Groups are used to manage permissions or apply policies to multiple users at onc
 
 1. In **Active Directory Users and Computers**, right-click `HR` → **New** → **Group**.
 
-![New HR Group](images/ad-tasks/groups/01-new-hr-group.PNG)
+![New HR Group](images/ad-tasks/groups/01-new-hr-group.png)
 
 2. Use these details:
    - Group name: `Managers`
@@ -116,11 +116,11 @@ Groups are used to manage permissions or apply policies to multiple users at onc
    - Group type: `Security`
 4. Click `OK`.
 
-![Managers Group](images/ad-tasks/groups/02-name-managers-group.PNG)
+![Managers Group](images/ad-tasks/groups/02-name-managers-group.png)
 
 🧑‍💻 Repeat for `ITSupport`:
 
-![New HR Group](images/ad-tasks/groups/03-new-itsupport-group.PNG)
+![New HR Group](images/ad-tasks/groups/03-new-itsupport-group.png)
 
 - Use these details:
    - Group name: `HelpDesk`
@@ -128,7 +128,7 @@ Groups are used to manage permissions or apply policies to multiple users at onc
    - Group type: `Security`
 - Click `OK`.
 
-![Managers Group](images/ad-tasks/groups/04-name-helpdesk-group.PNG)
+![Managers Group](images/ad-tasks/groups/04-name-helpdesk-group.png)
 
 🎉 It's starting to look like you know what you're doing! I'm sure glad one of us does...
 
@@ -142,33 +142,33 @@ Let’s assign our users to their department groups.
 
 1. Still in **Active Directory Users and Computers**, double-click `jsmith` in the `HR` OU.
 
-![Double Clicky](images/ad-tasks/groups/05-double-click-jsmith.PNG)
+![Double Clicky](images/ad-tasks/groups/05-double-click-jsmith.png)
 
 2. Go to the **Member Of** tab, then click `Add...`
 
-![Member Of Tab](images/ad-tasks/groups/06-member-of-tab.PNG)
+![Member Of Tab](images/ad-tasks/groups/06-member-of-tab.png)
 
 3. Type `Managers`, click `Check Names`, then click `OK`.
 
-![Check Name: Managers](images/ad-tasks/groups/07-managers-check-names.PNG)
+![Check Name: Managers](images/ad-tasks/groups/07-managers-check-names.png)
 
-![Name Checked: Managers](images/ad-tasks/groups/08-managers-ok.PNG)
+![Name Checked: Managers](images/ad-tasks/groups/08-managers-ok.png)
 
 4. Click `OK` to close **John Smith Properties** window.
 
-![Close Properties](images/ad-tasks/groups/09-close-jsmith-properties.PNG)
+![Close Properties](images/ad-tasks/groups/09-close-jsmith-properties.png)
 
 🧑‍💻 Do the same for `jdoe` in `ITSupport`:
 
-![Double Clicky](images/ad-tasks/groups/10-double-click-jdoe.PNG)
+![Double Clicky](images/ad-tasks/groups/10-double-click-jdoe.png)
 
-![Member Of Tab](images/ad-tasks/groups/11-member-of-tab.PNG)
+![Member Of Tab](images/ad-tasks/groups/11-member-of-tab.png)
 
 - Add `jdoe` to `HelpDesk`.
 
-![Check Name: Managers](images/ad-tasks/groups/12-helpdesk-check-names.PNG)
+![Check Name: Managers](images/ad-tasks/groups/12-helpdesk-check-names.png)
 
-![Name Checked: Managers](images/ad-tasks/groups/13-helpdesk-ok.PNG)
+![Name Checked: Managers](images/ad-tasks/groups/13-helpdesk-ok.png)
 
 🎉 Now we're cookin'. Keep up the great work, we're almost done!
 
@@ -182,38 +182,38 @@ We’ll now create a **Group Policy Object (GPO)** that displays a message when 
 
 1. Open **Server Manager** → **Tools** → **Group Policy Management**.
 
-![Server Manager - Tools](/images/ad-tasks/gpo/01-tools.PNG)
+![Server Manager - Tools](/images/ad-tasks/gpo/01-tools.png)
 
 2. Expand `corp.local` → `Departments`.
 3. Right-click `HR` → **Create a GPO in this domain, and Link it here...**
 
-![Create a GPO](/images/ad-tasks/gpo/02-create-gpo.PNG)
+![Create a GPO](/images/ad-tasks/gpo/02-create-gpo.png)
 
 4. Name it: `HR Login Message`, then click OK.
 
-![Name GPO](/images/ad-tasks/gpo/03-name-hr-gpo.PNG)
+![Name GPO](/images/ad-tasks/gpo/03-name-hr-gpo.png)
 
 5. Right-click the new GPO under `HR` and click `Edit`.
 
-![Edit HR GPO](/images/ad-tasks/gpo/04-edit-hr-gpo.PNG)
+![Edit HR GPO](/images/ad-tasks/gpo/04-edit-hr-gpo.png)
 
 6. In the **Group Policy Management Editor**, navigate to:
    - **Computer Configuration** → **Policies** → **Windows Settings** → **Security Settings** → **Local Policies** → **Security Options**
 7. Find and double-click **Interactive logon: Message title for users attempting to log on**.
 
-![Interactive Logon:](/images/ad-tasks/gpo/05-message-title.PNG)
+![Interactive Logon:](/images/ad-tasks/gpo/05-message-title.png)
 
 8. Set the title to: `HR Notice`
 
-![Interactive Logon:](/images/ad-tasks/gpo/06-set-title.PNG)
+![Interactive Logon:](/images/ad-tasks/gpo/06-set-title.png)
 
 9. Find and double-click **Interactive logon: Message text for users attempting to log on**.
 
-![Interactive Logon:](/images/ad-tasks/gpo/07-message-text.PNG)
+![Interactive Logon:](/images/ad-tasks/gpo/07-message-text.png)
 
 10. Set the message to: `This system is for HR use only.`
 
-![Set Title](/images/ad-tasks/gpo/08-set-message.PNG)
+![Set Title](/images/ad-tasks/gpo/08-set-message.png)
 
 ✔️ This message will show every time a user from the `HR` OU logs into CLIENT01.
 
@@ -233,16 +233,16 @@ Follow these steps:
 
 1. In **Active Directory Users and Computers**, expand your domain (`corp.local`) and click on **Computers**.
 
-![AD Users and Computers](/images/ad-tasks/gpo/09-users-and-computers.PNG)
+![AD Users and Computers](/images/ad-tasks/gpo/09-users-and-computers.png)
 
 2. In the right panel, right-click `CLIENT01`, the click `Move...`.
 
-![Move CLIENT01](/images/ad-tasks/gpo/10-move-client.PNG)
+![Move CLIENT01](/images/ad-tasks/gpo/10-move-client.png)
 
 3. Choose the `HR` OU
 4. Click `OK`.
 
-![Select HR](/images/ad-tasks/gpo/11-move-to-hr.PNG)
+![Select HR](/images/ad-tasks/gpo/11-move-to-hr.png)
 
 ✅ **Why this matters:** GPOs targeting computers will only work if the computers are in the right OU. Even if the GPO affects users, putting client machines in the correct OU ensures consistent results when testing. 
 
@@ -258,17 +258,17 @@ Now let's test that the login message works.
 
 1. On `CLIENT01`, log in as: `CORP\jsmith`.
 
-![Log In](/images/ad-tasks/test/01-jsmith-log-in.PNG)
+![Log In](/images/ad-tasks/test/01-jsmith-log-in.png)
 
 2. You may see the login message you set in the GPO before reaching the desktop, but if not:
    - Open **Command Prompt** on `CLIENT01` and run: ```gpupdate /force```
    - Restart and try again.
 
-![Force Update](/images/ad-tasks/test/02-force-update.PNG)
+![Force Update](/images/ad-tasks/test/02-force-update.png)
 
 3. Now you should see the login message!
 
-![Login Message](/images/ad-tasks/test/03-log-in-message.PNG)
+![Login Message](/images/ad-tasks/test/03-log-in-message.png)
 
 [🔝 Back to Top](#top)
 
