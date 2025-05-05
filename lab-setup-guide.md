@@ -551,6 +551,6 @@ This walkthrough was designed to help you build confidence in setting up virtual
 
 ## <h2 id="questions-or-feedback"> 💬 Questions or Feedback? </h2>
 
-If you find anything confusing or run into trouble, feel free to [open an issue](https://github.com/learnbuilddeploy/active-directory-home-lab/issues) or email me at learnbuilddeploylabs@gmail.com. Remember, this guide is made by a learner (that's me), for learners (that's you).
+If you find anything confusing or run into trouble, feel free to [open an issue](https://github.com/learnbuilddeploylabs/active-directory-home-lab/issues) or email me at learnbuilddeploylabs@gmail.com. Remember, this guide is made by a learner (that's me), for learners (that's you).
 
 [🔝 Back to Top](#top)
