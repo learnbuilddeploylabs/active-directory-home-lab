@@ -1,8 +1,8 @@
 <h1 id="top"> 🧪 Active Directory Lab Setup Guide (VMware Workstation Pro) </h1>
 
-🎯 Ideal for beginners. No prior Active Directory experience needed.
+🎯 Perfect for beginners — no prior Active Directory experience required.
 
-A step-by-step guide to building your own Active Directory lab from scratch using VMware Workstation Pro. This guide walks you through creating two virtual machines: a Domain Controller (Windows Server 2019) and a Client Machine (Windows 10 Pro), joining the domain, and getting ready for AD tasks (.
+This step-by-step guide will walk you through building your own Active Directory lab from scratch using VMware Workstation Pro. You'll create two virtual machines: a Domain Controller (Windows Server 2019) and a Client Machine (Windows 10 Pro), configure them, join the domain, and get everything set up for hands-on Active Directory tasks.
 
 ---
 
@@ -516,16 +516,15 @@ From here, you can start testing Active Directory tasks like creating users, gro
 
 ## <h2 id="wrapping-up"> 📦 Wrapping Up </h2>
 
-Awesome job! You've just finished installing and setting up your very own virtual enterprise environment! You've just learned how:
+Awesome job! You've just finished installing and setting up your very own virtual enterprise environment. Here's what you've accomplished:
 
-- Install and configure:
-  - Virtual machines using VMWare
-  - Windows operating systems
-  - Active Directory
-- Configuring IP and DNS settings
-- Joining a domain
+- Installed and configured virtual machines using VMware
+- Installed Windows operating systems
+- Set up Active Directory
+- Configured IP and DNS settings
+- Joined a client machine to your domain
 
-This walkthrough was designed to help you build confidence in installing and configuring virtual environments and operating systems, and I'm sure you'll be expanding and experimenting in no time!
+This walkthrough was designed to help you build confidence in setting up virtual environments and operating systems—and now you've done exactly that. You’ve laid the groundwork for your own homelab, and I’m sure you’ll be expanding and experimenting in no time! 🚀
 
 [🔝 Back to Top](#top)
 
