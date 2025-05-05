@@ -294,6 +294,6 @@ This walkthrough is meant to build confidence and familiarity. Once you're comfo
 
 ## <h2 id="questions-or-feedback"> 💬 Questions or Feedback? </h2>
 
-If you find anything confusing, run into trouble, or just want to reach and tell me how awesome I am for making this, feel free to [open an issue](https://github.com/learnbuilddeploy/active-directory-home-lab/issues) or email me at learnbuilddeploylabs@gmail.com.
+If you find anything confusing, run into trouble, or just want to reach and tell me how awesome I am for making this, feel free to [open an issue](https://github.com/learnbuilddeploylabs/active-directory-home-lab/issues) or email me at learnbuilddeploylabs@gmail.com.
 
 [🔝 Back to Top](#top)
