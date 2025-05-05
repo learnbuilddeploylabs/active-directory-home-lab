@@ -9,10 +9,10 @@ Welcome to your very own mini enterprise! This lab is designed for beginners who
 - 🖥️ Two virtual machines:
   - `DC01`: Windows Server 2019 domain controller
   - `CLIENT01`: Windows 10 or 11 workstation
+- 🌐 Networking using VMware NAT + Host-Only adapters
 - 🧱 Domain setup with `corp.local`
 - 🔐 Active Directory user and group management
 - 🧠 Group Policy walkthroughs
-- 🌐 Networking using VMware NAT + Host-Only adapters
 
 ---
 
@@ -24,7 +24,7 @@ Welcome to your very own mini enterprise! This lab is designed for beginners who
 - 🔗 [Windows 10 Evaluation ISO](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-10-enterprise)  
 
 ### 💾 System Requirements
-- Minimum: **2GB RAM** (4GB recommended)
+- Minimum: **4GB RAM** (4GB recommended)
 - At least **100GB of free disk space**
 - 🧠 Basic familiarity with Windows and networking settings
 
@@ -37,8 +37,8 @@ This project is divided into two parts:
 ### 🔧 [Lab Setup Guide](./lab-setup-guide.md)
 🚧 Set up your lab environment from scratch using VMware Workstation Pro.
 
-### 🎯 Active Directory Tasks Walkthrough (Coming Soon!)
-💡 Practice managing users, groups, OUs, GPOs, and more — coming soon!
+### 🎯 [Active Directory Tasks Walkthrough](./ad-basic-tasks.md)
+💡 Practice managing users, groups, OUs, and GPOs!
 
 ---
 
@@ -71,7 +71,7 @@ If this lab helps you out, consider:
 
 ## 📬 Contact
 
-Have a question or hit a snag? Feel free to [open an issue](https://github.com/yourusername/yourrepo/issues) — or find me on [YouTube @learnbuilddeploy](https://youtube.com/@learnbuilddeploy), where I walk through all of this in a chill, beginner-friendly format.
+Have a question or hit a snag? Feel free to [open an issue](https://github.com/learnbuilddeploy/active-directory-home-lab/issues) — or find me on [YouTube @learnbuilddeploy](https://youtube.com/@learnbuilddeploy), where I (plan to) walk through all of this in a chill, beginner-friendly format.
 
 You can also email me at learnbuilddeploylabs@gmail.com.
 
