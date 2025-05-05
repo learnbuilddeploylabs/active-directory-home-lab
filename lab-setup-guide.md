@@ -44,20 +44,20 @@ A step-by-step guide to building your own Active Directory lab from scratch usin
 - Open **VMware Workstation Pro**.
 - Select **Create a New Virtual Machine**.
   
-![Create a New Virtual Machine](/images/vm-installation/dc01-setup/01-create-vm.PNG)
+![Create a New Virtual Machine](images/vm-installation/dc01-setup/01-create-vm.png)
   
 - Choose **Typical (recommended)** and click `Next`.
   
-![Typical Installation](/images/vm-installation/dc01-setup/02-typical-config.PNG)
+![Typical Installation](images/vm-installation/dc01-setup/02-typical-config.PNG)
   
 - Select **I will install the operating system later**, then click `Next`.
   
-![Install Later](/images/vm-installation/dc01-setup/03-install-os-later.PNG)
+![Install Later](images/vm-installation/dc01-setup/03-install-os-later.PNG)
   
 - **OS: Microsoft Windows** → **Version: Windows Server 2019**.
 - Click `Next`.
 
-![Select OS](/images/vm-installation/dc01-setup/04-select-os.PNG)
+![Select OS](images/vm-installation/dc01-setup/04-select-os.PNG)
   
 - Name the virtual machine **DC01**, choose a save location, then click `Next`.
 
