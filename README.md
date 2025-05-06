@@ -1,6 +1,8 @@
 # 🧪 Active Directory Home Lab – Beginner Edition
 
-Welcome to your very own mini enterprise! This lab is designed for beginners who want to get hands-on with Active Directory, DNS, DHCP, Group Policy, and more — all from the comfort of a single machine using VMware Workstation Pro.
+Spin up your own mini enterprise IT environment — all from a single machine.
+
+This beginner-friendly lab walks you through installing and configuring Active Directory, DNS, DHCP, Group Policy, and more using VMware Workstation Pro. No prior Virtual Machine or Active Directory experience needed.
 
 ---
 
@@ -30,7 +32,7 @@ Welcome to your very own mini enterprise! This lab is designed for beginners who
 
 ---
 
-## 📚 How to Use This Repo
+## 📘 Start Building Your Lab
 
 This project is divided into two parts:
 
@@ -44,36 +46,37 @@ This project is divided into two parts:
 
 ## 🚀 Why This Lab?
 
-This project is built for learners who:
+This lab is built for learners who:
 
-- Want a no-nonsense AD lab that actually works
-- Prefer clear instructions without drowning in acronyms
-- Are new to IT or want to reinforce what they’re learning in class or certification prep
+- 👨‍💻 Want hands-on practice with a real Windows domain setup  
+- 🙅‍♀️ Are tired of vague instructions and confusing jargon  
+- 🎯 Are prepping for certs or interviews and need real-world context
 
 ---
 
 ## 📸 Screenshots
 
-Included throughout the [Lab Setup Guide](./lab-setup-guide.md) — no guesswork required.
+Included throughout both the [Lab Setup Guide](./lab-setup-guide.md) and the [Active Directory Tasks Walkthrough](./ad-basic-tasks.md) — no guesswork required.
 
 ---
 
-## ☕ Support This Project
+## ☕ Support & Subscribe
 
-If this lab helps you out, consider:
+If this project helps you out:
 
-- ⭐ Starring the repo
-- 🛠️ Opening an issue or PR for suggestions
-- 💬 Sharing feedback!
-- [☕ Buying me a coffee](https://buymeacoffee.com/learnbuilddeploy)
+- ⭐ Star this repo
+- 🔧 Suggest improvements or ask questions via [issues](https://github.com/learnbuilddeploylabs/active-directory-home-lab/issues)
+- ☕ [Buy me a coffee](https://buymeacoffee.com/learnbuilddeploy)
+- 📺 [Subscribe on YouTube](https://youtube.com/@learnbuilddeploy)
 
 ---
 
 ## 📬 Contact
 
-Have a question or hit a snag? Feel free to [open an issue](https://github.com/learnbuilddeploy/active-directory-home-lab/issues) — or find me on [YouTube @learnbuilddeploy](https://youtube.com/@learnbuilddeploy), where I (plan to) walk through all of this in a chill, beginner-friendly format.
+Got a question or hit a snag?
 
-You can also email me at learnbuilddeploylabs@gmail.com.
+- 💬 [Open an issue](https://github.com/learnbuilddeploylabs/active-directory-home-lab/issues)
+- 📧 Email: learnbuilddeploylabs@gmail.com
 
 ---
 
