@@ -80,4 +80,15 @@ Got a question or hit a snag?
 
 ---
 
+## 🙋‍♂️ About the Author
+
+This project was created by **Rob Merrill**, an aspiring cybersecurity professional documenting hands-on labs to help others learn by doing.
+
+- 🎓 Career-changer with a passion for IT and cybersecurity
+- 📺 Creator of [Learn. Build. Deploy.](https://youtube.com/@learnbuilddeploy)
+- 🧰 Always building — always sharing
+
+---
+
 **Cheers, and happy labbing!** 🥃
+
