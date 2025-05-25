@@ -26,7 +26,7 @@ This beginner-friendly lab walks you through installing and configuring Active D
 - 🔗 [Windows 10 Evaluation ISO](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-10-enterprise)  
 
 ### 💾 System Requirements
-- Minimum: **4GB RAM** (4GB recommended)
+- Minimum: **4GB RAM** (8GB recommended)
 - At least **100GB of free disk space**
 - 🧠 Basic familiarity with Windows and networking settings
 
@@ -80,4 +80,15 @@ Got a question or hit a snag?
 
 ---
 
+## 🙋‍♂️ About the Author
+
+This project was created by **Rob Merrill**, an aspiring cybersecurity professional documenting hands-on labs to help others learn by doing.
+
+- 🎓 Career-changer with a passion for IT and cybersecurity
+- 📺 Creator of [Learn. Build. Deploy.](https://youtube.com/@learnbuilddeploy)
+- 🧰 Always building — always sharing
+
+---
+
 **Cheers, and happy labbing!** 🥃
+
