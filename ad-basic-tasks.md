@@ -12,8 +12,8 @@ This walkthrough assumes **zero Active Directory experience** (like I had before
 - [👤 Step 2. Create User Accounts](#-step-2-create-user-accounts)
 - [👥 Step 3. Create Security Groups](#-step-3-create-security-groups)
 - [🔗 Step 4. Add Users to Groups](#-step-4-add-users-to-groups)
-- [🧠 Step 5. Create and Link a GPO](#-step-5-create-and-link-a-gpo)
-- [🖥️ Step 6. Move CLIENT01 into the Appropriate OU](#step-6)
+- [🧠 Step 5. Move CLIENT01 into the Appropriate OU](#step-5)
+- [🖥️ Step 6. Create and Link a GPO](#-step-6-create-link-and-push-a-gpo)
 - [🧪 Step 7. Test the GPO](#-step-7-test-the-gpo)
 - [📦 Wrapping Up](#-wrapping-up)
 - [💬 Questions or Feedback?](#questions-or-feedback)
@@ -176,9 +176,38 @@ Let’s assign our users to their department groups.
 
 ---
 
-## 🧠 Step 5. Create and Link a GPO
+<h2 id="step-5"> 🖥️ Step 5. Move CLIENT01 into the Appropriate OU </h2>
 
-We’ll now create a **Group Policy Object (GPO)** that displays a message when users `HR` users log in. This will help confirm the GPO is working.
+To make sure GPOs apply correctly, you need to move your client machine (`CLIENT01`) into the OU you're working with.
+
+I learned this the hard way...
+
+Follow these steps:
+
+1. In **Active Directory Users and Computers**, expand your domain (`corp.local`) and click on **Computers**.
+
+![AD Users and Computers](/images/ad-tasks/gpo/09-users-and-computers.png)
+
+2. In the right panel, right-click `CLIENT01`, the click `Move...`.
+
+![Move CLIENT01](/images/ad-tasks/gpo/10-move-client.png)
+
+3. Choose the `HR` OU
+4. Click `OK`.
+
+![Select HR](/images/ad-tasks/gpo/11-move-to-hr.png)
+
+✅ **Why this matters:** GPOs targeting computers will only work if the computers are in the right OU. 
+
+🎉 Nicely done! Just think of the tea you could spill around the office with this kind of power. 🤔
+
+[🔝 Back to Top](#top)
+
+---
+
+## 🧠 Step 6. Create, Link, and Push a GPO
+
+We’ll now create a **Group Policy Object (GPO)** that displays a message when users log in. This will help confirm the GPO is working.
 
 1. Open **Server Manager** → **Tools** → **Group Policy Management**.
 
@@ -203,7 +232,7 @@ We’ll now create a **Group Policy Object (GPO)** that displays a message when 
 
 ![Interactive Logon:](/images/ad-tasks/gpo/05-message-title.png)
 
-8. Set the title to: `HR Notice`
+8. Set the title to 'HR Notice' and click `OK`.
 
 ![Interactive Logon:](/images/ad-tasks/gpo/06-set-title.png)
 
@@ -211,42 +240,18 @@ We’ll now create a **Group Policy Object (GPO)** that displays a message when 
 
 ![Interactive Logon:](/images/ad-tasks/gpo/07-message-text.png)
 
-10. Set the message to: `This system is for HR use only.`
+10. Set the message to 'This system is for HR use only.' and click `OK`.
 
 ![Set Title](/images/ad-tasks/gpo/08-set-message.png)
 
-✔️ This message will show every time a user from the `HR` OU logs into CLIENT01.
+11. In the left panel, right-click `HR` and click **Group Policy Update...**
+   - 💡 This pushes the GPO update remotely to all computers in that OU — including `CLIENT01`.
 
-🎉 Nicely done! Just think of the tea you could spill around the office with this kind of power. 🤔
+![Push GPO](/images/ad-tasks/gpo/12-update.png)    
 
-[🔝 Back to Top](#top)
+✔️ This message will now show every time a user logs into CLIENT01.
 
----
-
-<h2 id="step-6"> 🖥️ Step 6. Move CLIENT01 into the Appropriate OU </h2>
-
-To make sure GPOs apply correctly, you need to move your Windows 10/11 client machine (`CLIENT01`) into the OU you're working with.
-
-I learned this the hard way...
-
-Follow these steps:
-
-1. In **Active Directory Users and Computers**, expand your domain (`corp.local`) and click on **Computers**.
-
-![AD Users and Computers](/images/ad-tasks/gpo/09-users-and-computers.png)
-
-2. In the right panel, right-click `CLIENT01`, the click `Move...`.
-
-![Move CLIENT01](/images/ad-tasks/gpo/10-move-client.png)
-
-3. Choose the `HR` OU
-4. Click `OK`.
-
-![Select HR](/images/ad-tasks/gpo/11-move-to-hr.png)
-
-✅ **Why this matters:** GPOs targeting computers will only work if the computers are in the right OU. Even if the GPO affects users, putting client machines in the correct OU ensures consistent results when testing. 
-
-🎉 Now you're ready to test! 
+🎉 Now you're ready to test!
 
 [🔝 Back to Top](#top)
 
@@ -256,19 +261,13 @@ Follow these steps:
 
 Now let's test that the login message works.
 
-1. On `CLIENT01`, log in as: `CORP\jsmith`.
+1. Power on `CLIENT01`, or restart if it's already running.
 
-![Log In](/images/ad-tasks/test/01-jsmith-log-in.png)
-
-2. You may see the login message you set in the GPO before reaching the desktop, but if not:
-   - Open **Command Prompt** on `CLIENT01` and run: ```gpupdate /force```
-   - Restart and try again.
-
-![Force Update](/images/ad-tasks/test/02-force-update.png)
-
-3. Now you should see the login message!
+2. You should see the login message!
 
 ![Login Message](/images/ad-tasks/test/03-log-in-message.png)
+
+🎉 That’s it! The GPO is working, and you’re officially dangerous.
 
 [🔝 Back to Top](#top)
 
